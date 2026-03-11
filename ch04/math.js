@@ -16,6 +16,7 @@ const numStr = "10";
 // + 연산자의 경우 String으로 형변관해 문자열을 이어 붙여준다.
 console.log(str + b);   // hi3
 console.log(numStr + b) // 103
+
 // 이외 연산자는 Number로 형 변환해 연산을 시도한다
 console.log(numStr - 3);
 console.log(numStr * 3);
