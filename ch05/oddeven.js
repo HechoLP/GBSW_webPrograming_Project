@@ -13,5 +13,13 @@ rl.question("정수를 입력하세요. : ", function(num){
     } else {
         console.log("홀수입니다.");
     }
+    /*
+    if (num & 1 == 1) {
+        console.log("짝수입니다.");
+    } else {
+        console.log("홀수입니다.");
+    }
+    // 2진수 사용하여 비트 연산자
+    */
     rl.close();
 });
