@@ -27,4 +27,5 @@ rl.question("점수를 입력하세요. : ", function(score){
     } else {
         console.log("범위를 벗어났습니다.")
     }
+    rl.close();
 });
