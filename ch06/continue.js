@@ -6,4 +6,4 @@ while (num < 10){
         continue;
     }
     console.log(num);
-}
+}1
