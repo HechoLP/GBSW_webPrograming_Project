@@ -5,3 +5,5 @@ function solution(start_num, end_num) {
     }
     return answer;
 }
+
+console.log(solution(1, 5));
