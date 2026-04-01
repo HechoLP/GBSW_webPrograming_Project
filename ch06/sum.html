@@ -1,0 +1,33 @@
+<!-- Html input 통해 n 입력받기 -->
+<!-- 1 ~ n까지의 누적합을 반복문을 이용해 계산 -->
+<!-- 누적합을 문서를 통해 출력 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>누적합</title>
+</head>
+<body>
+    <h1>누적합</h1>
+    <input type="number" id="input_num" placeholder="정수 입력해주세요"/>
+    <button type="button" id="btn">확인</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("btn").onclick = function() {
+
+            const n = Number(document.getElementById("input_num").value);
+            const resultDiv = document.getElementById("result");
+
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            resultDiv.innerText = sum;
+        };
+    </script>
+</body>
+</html>
