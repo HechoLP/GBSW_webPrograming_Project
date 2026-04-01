@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홀짝 구분</title>
+</head>
+<body>
+    <h1>짝수 홀수 구분</h1>
+    <input id="input_num" type="number" placeholder="숫자를 입력해주세요."/>
+    <button type="button" id="btn">확인</button>
+    <div id="result">.</div>
+
+    <script>
+        // 버튼에 Click 이벤트 등록
+        document.getElementById("btn").onclick = function(){
+            // input 내의 값 조회
+            const num = document.getElementById("input_num").value;
+            const text = document.getElementById("result");
+
+            // 입력값의 예외처리
+            if (num == ""){
+                text.innerText = "숫자를 입력해주세요.";
+                return;
+            }
+
+            // 홀짝 판별
+            result0 = null;
+            if (num % 2 == 0){
+                result = "짝수입니다."
+            }
+            else {
+                result = "홀수입니다."
+            }
+
+            // 출력
+            document.getElementById("resuklt").textContent = result;
+            // text.innerText = result
+        }
+    </script>
+</body>
+</html>
