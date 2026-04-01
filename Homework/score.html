@@ -6,6 +6,57 @@
 </head>
 <body>
 
+    <h2>성적 확인하기</h2>
+    <input type="number" id="score" placeholder="점수 입력">
+    <button onclick="check()">확인</button>
+    <p id="resultText"></p>
+
+    <script>
+        function check() {
+            const numScore = Number(score.value);
+
+            if (score.value === "" || numScore < 0 || numScore > 100) {
+                resultText.innerText = "올바른 점수(0~100)를 입력하세요.";
+                return;
+            }
+
+            const quotient = Math.trunc(numScore / 10);
+            let grade;
+
+            switch (quotient) {
+                case 10:
+                case 9:
+                    grade = "A";
+                    break;
+                case 8:
+                    grade = "B";
+                    break;
+                case 7:
+                    grade = "C";
+                    break;
+                case 6:
+                    grade = "D";
+                    break;
+                default:
+                    grade = "F";
+            }
+
+            resultText.innerText = "학점: " + grade;
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>성적 계산기</title>
+</head>
+<body>
+
     <h1>성적 확인하기</h1>
     <input type="number" id="score" placeholder="점수 입력">
     <button type="button" id="btn">확인</button>
@@ -49,3 +100,4 @@
 
 </body>
 </html>
+-->
